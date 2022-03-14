@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* custom properties */
+:root {
+    --bg-primary-bright-orange: hsl(31, 77%, 52%);
+    --bg-primary-dark-cyan: hsl(184, 100%, 22%);
+    --bg-primary--very-dark-cyan: hsl(179, 100%, 13%);
+
+    --bg-neutral-transparent-white-para: hsla(0, 0%, 100%, 0.75);
+    --bg-neutral-very-light-grey-background-heading-buttons: hsl(0, 0%, 95%);
+
+    --ff-primary: 'Lexend Deca', sans-serif;
+    --ff-secondary: 'Big Shoulders Display', cursive;
+
+    --fs-h1: 2.5rem;
+    --fs-body: 15px;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+}
+
+/* general properties */
+html {
+    background-color: var(--bg-neutral-transparent-white-para);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 10%;
+    line-height: 2;
+    font-family: var(--ff-primary);
+}
+
+.main-body {
+    margin-top: 10%;
+    width: 375px;
+    border-radius: 10px;
+}
+
+.card {
+    padding: 2.5em;
+}
+
+.div__img--car {
+    padding-left: 1.5em;
+}
+
+.div__title {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    color: var(--bg-neutral-very-light-grey-background-heading-buttons);
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-inline: .75em;
+}
+
+.div__subtitle {
+    font-size: var(--fs-body);
+    color: var(--bg-neutral-transparent-white-para);
+    padding: 2em;
+    padding-top: 0;
+}
+
+.div__background--orange {
+    background-color: var(--bg-primary-bright-orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.div__background--dark-cyan {
+    background-color: var(--bg-primary-dark-cyan);
+}
+
+.div__background--very-dark-cyan {
+    background-color: var(--bg-primary--very-dark-cyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.div__button {
+    background-color: var(--bg-neutral-very-light-grey-background-heading-buttons);
+    margin-left: 2em;
+    padding: 1em 2.5em;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+
+.div__button:hover {
+    background-color: transparent;
+    color: var(--bg-neutral-very-light-grey-background-heading-buttons);
+    border: 2px solid var(--bg-neutral-very-light-grey-background-heading-buttons);
+}
+
+.button-orange {
+    color: var(--bg-primary-bright-orange);
+}
+
+.button-dark-cyan {
+    color: var(--bg-primary-dark-cyan);
+}
+
+.button-very-dark-cyan {
+    color: var(--bg-primary--very-dark-cyan);
+}
+
+@media (min-width: 800px) {
+    .main-body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .card {
+        width: 300px;
+        height: 500px;
+    }
+
+    .div__img--car {
+        padding: 0;
+    }
+
+    .div__title {
+        padding: 0;
+    }
+
+    .div__subtitle {
+        padding: 0;
+        padding-right: 1em;
+    }
+
+    .div__button {
+        margin: 0;
+        margin-top: 6em;
+    }
+
+    .div__background--orange {
+        background-color: var(--bg-primary-bright-orange);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+
+    .div__background--very-dark-cyan {
+        background-color: var(--bg-primary--very-dark-cyan);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+.attribution { 
+    padding-top: 8em;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
